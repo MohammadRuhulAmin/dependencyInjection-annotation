@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="programmer1" class="com.example.introToDIoc.model.Programmer">
+		<property name="id" value="101"></property>
+		<property name="name" value="Md Ruhul Amin"></property>
+		<property name="language" value="java"></property>
+		<property name="machine" ref="machine1"></property>
+
+	</bean>
+	<bean id="machine1" class="com.example.introToDIoc.model.Machine">
+		<property name="brand" value="ASUS"></property>
+	</bean>
+
+	<bean id="student1" class="com.example.introToDIoc.model.Student">
+		<constructor-arg index="0" value="1121"></constructor-arg>
+		<constructor-arg index="1" value="Aynun Jariya"></constructor-arg>
+		<constructor-arg index="2" value="aynun@gmail.com"></constructor-arg>
+		<constructor-arg index="3" value="4.00"></constructor-arg>
+		<constructor-arg index="4" ref="mobile1"></constructor-arg>
+
+	</bean>
+
+	<bean id="mobile1" class="com.example.introToDIoc.model.Mobile">
+		<constructor-arg index="0" value="1122"></constructor-arg>
+		<constructor-arg index="1" value="SAMSUNG"></constructor-arg>
+		<constructor-arg index="2" value="01322-352864"></constructor-arg>
+	</bean>
+
+
+</beans>
